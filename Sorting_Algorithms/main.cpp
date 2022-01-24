@@ -2,7 +2,8 @@
 #include<iomanip>
 #include<chrono>
 #include"select_sort.h"
-#include"bubleSort.h"
+#include"buble_Sort.h"
+#include"recursive_Buble_Sort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
@@ -25,7 +26,7 @@ int main() {
 	int* ptr = new int[50];
 	generateArr(ptr, 50);
 	printArr(ptr, 50);
-	measureTIme = bubleSort;
+	measureTIme = recursiveBubleSort;
     measureTIme(ptr, 50);
 	printArr(ptr, 50);
 

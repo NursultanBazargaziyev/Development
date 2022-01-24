@@ -10,9 +10,6 @@ void selectSort(int* a, int length) {
 		for ( j = i; j < length; j++)
 			if (a[smallest] > a[j])
 				smallest = j;
-		
-		
-		
 		std::swap(a[i], a[smallest]);
 	}
 }
