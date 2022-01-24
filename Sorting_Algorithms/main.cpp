@@ -2,12 +2,16 @@
 #include<iomanip>
 #include<chrono>
 #include"select_sort.h"
+#include"bubleSort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
 
 //Selection sort Algorithm
 //22-01-22
+
+//Buble sort Algorithm 
+//24-01-22 
 
 void generateArr(int* a, int length);
 void printArr(int* a, int length);
@@ -21,7 +25,7 @@ int main() {
 	int* ptr = new int[50];
 	generateArr(ptr, 50);
 	printArr(ptr, 50);
-	measureTIme = &selectSort;
+	measureTIme = bubleSort;
     measureTIme(ptr, 50);
 	printArr(ptr, 50);
 
