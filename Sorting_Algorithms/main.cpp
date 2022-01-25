@@ -5,6 +5,7 @@
 #include"buble_Sort.h"
 #include"recursive_Buble_Sort.h"
 #include"insertionSort.h"
+#include"recursiveInsertionSort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
@@ -33,8 +34,9 @@ int main() {
 	int* ptr = new int[50];
 	generateArr(ptr, 50);
 	printArr(ptr, 50);
-	measureTIme = insertionSort;
-    measureTIme(ptr, 50);
+	// measureTIme = RecursiveInsertionSort;
+	RecursiveInsertionSort(ptr, 50);
+    // measureTIme(ptr, 50);
 	printArr(ptr, 50);
 
 	
