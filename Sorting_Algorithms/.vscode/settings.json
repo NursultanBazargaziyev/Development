@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "xmemory": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp"
     }
 }
