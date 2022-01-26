@@ -6,6 +6,7 @@
 #include"recursive_Buble_Sort.h"
 #include"insertionSort.h"
 #include"recursiveInsertionSort.h"
+#include"mergeSort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
@@ -22,6 +23,9 @@ using std::endl;
 // Recursive Insertion sort Algorithm
 //25-01-22
 
+// Merge sort Algorithm
+// 25-01-22
+
 void generateArr(int* a, int length);
 void printArr(int* a, int length);
 void (*measureTIme)(int*, int);
@@ -34,9 +38,9 @@ int main() {
 	int* ptr = new int[50];
 	generateArr(ptr, 50);
 	printArr(ptr, 50);
-	// measureTIme = RecursiveInsertionSort;
-	RecursiveInsertionSort(ptr, 50);
-    // measureTIme(ptr, 50);
+	measureTIme = mergeSort;
+	// RecursiveInsertionSort(ptr, 50);
+    measureTIme(ptr, 50);
 	printArr(ptr, 50);
 
 	
