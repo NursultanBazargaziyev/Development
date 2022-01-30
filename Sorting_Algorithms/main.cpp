@@ -1,12 +1,12 @@
 #include<iostream>
 #include<iomanip>
 #include<chrono>
-#include"select_sort.h"
-#include"buble_Sort.h"
-#include"recursive_Buble_Sort.h"
-#include"insertionSort.h"
-#include"recursiveInsertionSort.h"
-#include"mergeSort.h"
+#include"headerFiles/select_sort.h"
+#include"headerFiles/buble_Sort.h"
+#include"headerFiles/recursive_Buble_Sort.h"
+#include"headerFiles/insertionSort.h"
+#include"headerFiles/recursiveInsertionSort.h"
+#include"headerFiles/mergeSort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
@@ -35,13 +35,15 @@ void (*measureTIme)(int*, int);
 
 int main() {
 	srand(time(NULL));
-	int* ptr = new int[50];
-	generateArr(ptr, 50);
-	printArr(ptr, 50);
-	measureTIme = mergeSort;
-	// RecursiveInsertionSort(ptr, 50);
-    measureTIme(ptr, 50);
-	printArr(ptr, 50);
+	int size = 50;
+	int* ptr = new int[size];
+	generateArr(ptr, size);
+	printArr(ptr, size);
+	// measureTIme = mergeSort;
+	mergeSort(ptr, 0, size);
+	// RecursiveInsertionSort(ptr, size);
+    // measureTIme(ptr, size);
+	printArr(ptr, size);
 
 	
 	return 0;
