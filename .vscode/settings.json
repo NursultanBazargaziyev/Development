@@ -1,6 +1,16 @@
 {
     "files.associations": {
         "xlocale": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "exception": "cpp",
+        "forward_list": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory": "cpp",
+        "optional": "cpp",
+        "sstream": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "vector": "cpp"
     }
 }

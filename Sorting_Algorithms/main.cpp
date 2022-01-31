@@ -1,12 +1,14 @@
 #include<iostream>
 #include<iomanip>
 #include<chrono>
+#include<string>
 #include"headerFiles/select_sort.h"
 #include"headerFiles/buble_Sort.h"
 #include"headerFiles/recursive_Buble_Sort.h"
 #include"headerFiles/insertionSort.h"
 #include"headerFiles/recursiveInsertionSort.h"
 #include"headerFiles/mergeSort.h"
+#include"headerFiles/quickSort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
@@ -26,6 +28,9 @@ using std::endl;
 // Merge sort Algorithm
 // 25-01-22
 
+// Quick sort Algorith
+// 30-01-22
+
 void generateArr(int* a, int length);
 void printArr(int* a, int length);
 void (*measureTIme)(int*, int);
@@ -33,16 +38,18 @@ void (*measureTIme)(int*, int);
 
 
 
+
+
+
 int main() {
 	srand(time(NULL));
-	int size = 50;
-	int* ptr = new int[size];
+	int size = 7;
+	int * ptr = new int[size];	
 	generateArr(ptr, size);
 	printArr(ptr, size);
-	// measureTIme = mergeSort;
-	mergeSort(ptr, 0, size);
-	// RecursiveInsertionSort(ptr, size);
-    // measureTIme(ptr, size);
+	// measureTIme = bubleSort;
+ 	quickSort(ptr, 0, size - 1);
+	// measureTIme(ptr, size);
 	printArr(ptr, size);
 
 	
@@ -50,8 +57,8 @@ int main() {
 }
 
 
-
-
+// mergeSort(ptr, 0, size);
+// RecursiveInsertionSort(ptr, size);
 
 
 
@@ -64,6 +71,8 @@ void generateArr(int* a, int length)
 	for (int i = 0; i < length; i++)
 		a[i] = rand() % 500;
 }
+
+
 
 void printArr(int* a, int length)
 {
