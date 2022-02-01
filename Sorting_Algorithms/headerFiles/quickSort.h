@@ -27,7 +27,7 @@ void quickSort(int* arr, int start, int size){
             
         }
         quickSort(arr, start, l - 1);
-        quickSort(arr, r, size);
+        quickSort(arr, l, size);
     }
 }
 

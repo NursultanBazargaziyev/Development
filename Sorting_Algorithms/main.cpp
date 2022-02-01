@@ -31,6 +31,10 @@ using std::endl;
 // Quick sort Algorith
 // 30-01-22
 
+// Heap sort Algorithm 
+// 01-02-2022
+
+
 void generateArr(int* a, int length);
 void printArr(int* a, int length);
 void (*measureTIme)(int*, int);
@@ -43,12 +47,11 @@ void (*measureTIme)(int*, int);
 
 int main() {
 	srand(time(NULL));
-	int size = 7;
+	int size = 50;
 	int * ptr = new int[size];	
 	generateArr(ptr, size);
 	printArr(ptr, size);
 	// measureTIme = bubleSort;
- 	quickSort(ptr, 0, size - 1);
 	// measureTIme(ptr, size);
 	printArr(ptr, size);
 
@@ -57,6 +60,7 @@ int main() {
 }
 
 
+// quickSort(ptr, 0, size - 1);
 // mergeSort(ptr, 0, size);
 // RecursiveInsertionSort(ptr, size);
 
