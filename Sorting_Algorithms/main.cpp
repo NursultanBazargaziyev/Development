@@ -2,13 +2,14 @@
 #include<iomanip>
 #include<chrono>
 #include<string>
-#include"headerFiles/select_sort.h"
-#include"headerFiles/buble_Sort.h"
-#include"headerFiles/recursive_Buble_Sort.h"
+#include"headerFiles/selectSort.h"
+#include"headerFiles/bubleSort.h"
+#include"headerFiles/recursiveBubleSort.h"
 #include"headerFiles/insertionSort.h"
 #include"headerFiles/recursiveInsertionSort.h"
 #include"headerFiles/mergeSort.h"
 #include"headerFiles/quickSort.h"
+#include"headerFiles/heapSort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
@@ -47,12 +48,12 @@ void (*measureTIme)(int*, int);
 
 int main() {
 	srand(time(NULL));
-	int size = 50;
+	int size = 12;
 	int * ptr = new int[size];	
 	generateArr(ptr, size);
 	printArr(ptr, size);
-	// measureTIme = bubleSort;
-	// measureTIme(ptr, size);
+	measureTIme = heapSort;
+	measureTIme(ptr, size);
 	printArr(ptr, size);
 
 	
@@ -78,10 +79,10 @@ void generateArr(int* a, int length)
 
 
 
-void printArr(int* a, int length)
+void printArr(int* arr, int length)
 {
 	for (int i = 0; i < length; i++) {
-		cout << std::left << std::setw(2) << i + 1  << ": "  << std::left << std::setw(10) << a[i];
+		cout << std::left << std::setw(2) << i + 1  << ": "  << std::left << std::setw(10) << arr[i];
 		if ((i + 1) % 4 == 0)
 			cout << endl;
 	}
