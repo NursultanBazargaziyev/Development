@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\Nursu\OneDrive\Рабочий стол\University\3 Semestr\Algorithm and Comlexity\Project_1\Project_1\Project_1\heapsort.h(8,2): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Nursu\OneDrive\Рабочий стол\University\3 Semestr\Algorithm and Comlexity\Project_1\Project_1\Project_1\heapsort.h(10,34): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Nursu\OneDrive\Рабочий стол\University\3 Semestr\Algorithm and Comlexity\Project_1\Project_1\Project_1\heapsort.h(13,2): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Nursu\OneDrive\Рабочий стол\University\3 Semestr\Algorithm and Comlexity\Project_1\Project_1\Project_1\mergesort.h(19,29): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Nursu\OneDrive\Рабочий стол\University\3 Semestr\Algorithm and Comlexity\Project_1\Project_1\Project_1\quicksort.h(10,38): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Project_1.vcxproj -> C:\Users\Nursu\OneDrive\Рабочий стол\University\3 Semestr\Algorithm and Comlexity\Project_1\Project_1\x64\Debug\Project_1.exe

@@ -1,0 +1,1 @@
+In this folder you can find 100 results compile time of arrays with sizes from 100 to 10000
