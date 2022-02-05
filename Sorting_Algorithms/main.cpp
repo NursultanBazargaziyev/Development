@@ -57,6 +57,7 @@ int main() {
 	printArr(ptr, size);
 
 	
+	system("pause");
 	return 0;
 }
 
