@@ -10,6 +10,7 @@
 #include"headerFiles/mergeSort.h"
 #include"headerFiles/quickSort.h"
 #include"headerFiles/heapSort.h"
+#include"headerFiles/countingSort.h"
 using namespace std::chrono;
 using std::cout;
 using std::endl;
@@ -36,7 +37,7 @@ using std::endl;
 // 01-02-2022
 
 
-void generateArr(int* a, int length);
+void generateArr(int* a, int length, int range);
 void printArr(int* a, int length);
 void (*measureTIme)(int*, int);
 
@@ -48,12 +49,13 @@ void (*measureTIme)(int*, int);
 
 int main() {
 	srand(time(NULL));
-	int size = 12;
+	int size = 7;
 	int * ptr = new int[size];	
-	generateArr(ptr, size);
+	generateArr(ptr, size, 9);
 	printArr(ptr, size);
-	measureTIme = heapSort;
-	measureTIme(ptr, size);
+	// measureTIme = heapSort;
+	// measureTIme(ptr, size);
+	countingSort(ptr, size, 0, 9);
 	printArr(ptr, size);
 
 	
@@ -72,10 +74,10 @@ int main() {
 
 
 
-void generateArr(int* a, int length)
+void generateArr(int* a, int length, int range)
 {
 	for (int i = 0; i < length; i++)
-		a[i] = rand() % 500;
+		a[i] = rand() % range;
 }
 
 
