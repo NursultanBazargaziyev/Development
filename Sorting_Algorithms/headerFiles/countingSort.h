@@ -22,9 +22,9 @@ void countingSort(int *arr, int size, int begin, int last)
     
     for (int i = 0; i < size; i++)
     {
-        int current = range[arr[i]] - 1; 
-        arr[i] = copy[current];
-        range[current]--;
+        int current = range[copy[i]]; 
+        arr[current - 1] = copy[i];
+        range[copy[i]]--;
     }
     
 }

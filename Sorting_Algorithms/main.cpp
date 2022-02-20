@@ -49,17 +49,16 @@ void (*measureTIme)(int*, int);
 
 int main() {
 	srand(time(NULL));
-	int size = 7;
+	int size = 20;
 	int * ptr = new int[size];	
-	generateArr(ptr, size, 9);
+	generateArr(ptr, size, 20);
 	printArr(ptr, size);
 	// measureTIme = heapSort;
 	// measureTIme(ptr, size);
-	countingSort(ptr, size, 0, 9);
+	countingSort(ptr, size, 0, 20);
 	printArr(ptr, size);
 
 	
-	system("pause");
 	return 0;
 }
 
@@ -77,7 +76,7 @@ int main() {
 void generateArr(int* a, int length, int range)
 {
 	for (int i = 0; i < length; i++)
-		a[i] = rand() % range;
+		a[i] = rand() % (range + 1);
 }
 
 
